@@ -184,3 +184,8 @@ body {
     border-style: inset;
     background-color: aqua;
 }
+
+
+#p01 {
+    visibility: hidden;
+}
