@@ -9,7 +9,7 @@
 
 
 var movesDone = 0,storeArray = [], tempArray = [], intSquareVal, checkHide = [-1, -2, -3, -4], count = 0, winCount = 0, checkSize, start = 0;
-var timerInterval, startTime, days, seconds, hours, minutes, tiTi, scoreP = [0,0], check = 0, gameState = 0, winState = 0;
+var timerInterval, startTime, days, seconds, hours, minutes, tiTi, scoreP = [0,0], check = 0, gameState = 0;
 
 
 //**********************************************window.onload******************************************//
