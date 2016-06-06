@@ -7,6 +7,8 @@ window.onload = function() {
     document.getElementById("div03").style.height = screen.height + 'px';
     document.getElementById("div03").style.top = screen.height*3 + 'px';
     document.getElementById("div02").style.paddingTop = (screen.height*1/3) + 'px';
+    document.getElementById("div02").style.background = "url('image06.jpg')";
+    document.getElementById("div02").style.backgroundSize = "100% 60%";
     interval1stBackground = setInterval(writeIntro, 150);
 }
 
