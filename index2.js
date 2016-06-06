@@ -9,7 +9,7 @@
 
 
 var movesDone = 0,storeArray = [], tempArray = [], intSquareVal, checkHide = [-1, -2, -3, -4], count = 0, winCount = 0, checkSize, start = 0;
-var timerInterval, startTime, days, seconds, hours, minutes, tiTi, scoreP = [0,0], check = 0, gameState = 0;
+var timerInterval, startTime, days, seconds, hours, minutes, tiTi, scoreP = [0,0], check = 0, gameState = 0, winState = 0;
 
 
 //**********************************************window.onload******************************************//
@@ -148,7 +148,7 @@ function changeVisibility(a) {
       var actualPoints = 1000/((days * 24 * 60 * 60) + (hours * 60 * 60) + (minutes * 60) + seconds);
       document.getElementById("dispPointsPara").innerHTML = "Scored " + actualPoints.toFixed(2) + " points!!!Congrats.....";
       document.getElementById("dispPointsPara").style.visibility = "visible";
-      alert(document.getElementById("inputName").value + " you WON!!!...see results below-->");
+      setTimeout(function(){alert(document.getElementById("inputName").value + " you WON!!!...see results below-->")}, 600);
     }
   }
 }
