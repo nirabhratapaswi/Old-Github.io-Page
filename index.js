@@ -21,14 +21,20 @@ function parallax() {
     document.getElementById("p01").innerHTML = window.pageYOffset;
     if((document.getElementById("p01").innerHTML >= 0) && (document.getElementById("p01").innerHTML <= screen.height)){
         document.getElementById("div02").style.background = "url('image06.jpg')";
+        document.getElementById("div02").style.color = "red";
+        document.getElementById("div02").style.textShadow = "-2px -2px 0px rgba(150, 0, 0, 0.69)";
         document.getElementById("div02").style.backgroundSize = "100% 60%";
     }
     if((document.getElementById("p01").innerHTML >= screen.height) && (document.getElementById("p01").innerHTML <= 3*screen.height)){
         document.getElementById("div02").style.background = "url('image04.jpg')";
+        document.getElementById("div02").style.color = "darkgoldenrod";
+        document.getElementById("div02").style.textShadow = "-2px -2px 0px rgba(255, 255, 25, 0.69)";
         document.getElementById("div02").style.backgroundSize = "100% 65%";
     }
     else if((document.getElementById("p01").innerHTML >= 3*screen.height) && (document.getElementById("p01").innerHTML <= 5*screen.height)){
         document.getElementById("div02").style.background = "url('image05.jpg')";
+        document.getElementById("div02").style.color = "green";
+        document.getElementById("div02").style.textShadow = "-2px -2px 0px rgba(0, 150, 25, 0.69)";
         document.getElementById("div02").style.backgroundSize = "100% 125%";
     }
 }
