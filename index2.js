@@ -16,15 +16,14 @@ var timerInterval, startTime, days, seconds, hours, minutes, tiTi, scoreP = [0,0
 
 
 window.onload = function() {
-    randomAllocateArray(document.getElementById("squareSizeVal").value);
-    //shuffleNumbers();
+    randomAllocateArray(document.getElementById("squareSizeVal").value);                //allocates the array to fit into the chosen grid
 }
 
 
 //**********************************************randomAllocateArray******************************************//
 
 
-function randomAllocateArray(squareSizeVal) {
+function randomAllocateArray(squareSizeVal) {                           //function for random array allocation
   if((document.getElementById("squareSizeVal").value > 0) && (document.getElementById("squareSizeVal").value % 2 == 0)) {
     gameState = 0;
     document.getElementById("dispPointsPara").style.visibility = "hidden";
@@ -66,14 +65,14 @@ function allocateNumbers() {
 //**********************************************shuffleNumbers******************************************//
 
 
-function swap1(a, b) {
+function swap1(a, b) {                                          //swap function used in shuffle numbers
   var temp = storeArray[a];
   storeArray[a] = storeArray[b];
   storeArray[b] = temp;
 }
 
 
-function shuffleNumbers() {
+function shuffleNumbers() {                                      //Similar Algorithm to Fisher_Yates Algo
   var i = 0, storeNumber;
   allotRandomNumbers();
   for(i = (intSquareVal*intSquareVal - 1); i > 0 ; i--) {
@@ -87,7 +86,7 @@ function shuffleNumbers() {
 }
 
 
-function allotRandomNumbers() {
+function allotRandomNumbers() {                                       //Writing the shuffled random numbers to the tiles
   var i = 0;
   for(i = 0; i < (intSquareVal*intSquareVal/2); i++) {
     tempArray[i] = Math.ceil(Math.random() * intSquareVal * intSquareVal);
@@ -104,7 +103,7 @@ function allotRandomNumbers() {
 //**********************************************testFunction******************************************//
 
 
-function changeVisibility(a) {
+function changeVisibility(a) {                                      //Changing visibility on clicking tiles
   if(gameState == 0) {
     if(start == 0) {
       startTime = new Date();
@@ -157,7 +156,7 @@ function changeVisibility(a) {
 //**********************************************resetGame******************************************//
 
 
-function resetGame() {
+function resetGame() {                                              //Reset Game
     randomAllocateArray(checkSize);
     movesDone = 0;
     winCount = 0;
@@ -172,7 +171,7 @@ function resetGame() {
 //**********************************************startCounter******************************************//
 
 
-function startClock() {
+function startClock() {                                          //Starting Upcount Clock
 	var checkTime = new Date();
 	var dispTime = Date.parse(checkTime) - Date.parse(startTime);
 	seconds = Math.floor((dispTime / 1000) % 60);

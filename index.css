@@ -189,3 +189,9 @@ body {
 #p01 {
     visibility: hidden;
 }
+
+
+#paraChangePic {
+    position: relative;
+    font-size: 18px;
+}
