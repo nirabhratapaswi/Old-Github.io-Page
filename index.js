@@ -1,12 +1,12 @@
 var myVar;
 
       function animateFunc() {
-          console.log("AnimateFunc!!");
-          myVar = setTimeout(showPage, 2500);
+          //console.log("AnimateFunc!!");
+          myVar = setTimeout(showPage, 1500);
       }
 
       function showPage() {
-        console.log("Show page!!");
+        //console.log("Show page!!");
         document.getElementById("loader").style.display = "none";
         document.getElementById("loader1").style.display = "none";
         document.getElementById("loader2").style.display = "none";
