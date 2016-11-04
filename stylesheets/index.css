@@ -159,3 +159,17 @@ body {
   .navbar-nav  li a:hover {
       color: #1abc9c !important;
   }
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+
+/*.carousel .item {
+  height: 500px;
+}
+
+.carousel .item img {
+  height: 500px;
+}*/
