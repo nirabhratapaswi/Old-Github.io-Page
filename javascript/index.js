@@ -1,43 +1,45 @@
-var myVar;
+var toggle = true;
+	    $("#menu-toggle").click(function(e) {
+	        e.preventDefault();
+	        $("#bodyWrapper").toggleClass("toggled");
+	        if(toggle) {
+		        $("#menu-toggle>span").removeClass("glyphicon glyphicon-menu-hamburger");
+		        $("#menu-toggle>span").addClass("glyphicon glyphicon-remove");
+		        toggle = !toggle;
+		    }
+		    else {
+		    	$("#menu-toggle>span").removeClass("glyphicon glyphicon-remove");
+		        $("#menu-toggle>span").addClass("glyphicon glyphicon-menu-hamburger");
+		        toggle = !toggle;
+		    }
+	    });
+var key_shift = false,
+	key_o = false,
+	key_n = false;
 
-      function animateFunc() {
-          //console.log("AnimateFunc!!");
-          myVar = setTimeout(showPage, 1500);
-      }
+document.addEventListener("keyup", function(event) {
+	if(event.which == 16) {
+		key_shift = false;
+	}
+	if(event.which == 79) {
+		key_o = false;
+	}
+	if(event.which == 78) {
+		key_n = false;
+	}
+});
 
-      function showPage() {
-        //console.log("Show page!!");
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("loader1").style.display = "none";
-        document.getElementById("loader2").style.display = "none";
-        document.getElementById("loader3").style.display = "none";
-        document.getElementById("mainPage").style.display = "block";
-      }
-
-    $(document).ready(function(){
-
-      // Add scrollspy to <body>
-      $('body').scrollspy({target: ".navbar", offset: 50});   
-
-      // Add smooth scrolling on all links inside the navbar
-      $("#myNavbar a").on('click', function(event) {
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
-
-          // Store hash
-          var hash = this.hash;
-
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 800, function(){
-       
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        }  // End if
-      });
-    });
+document.addEventListener("keydown", function(event) {
+	if(event.which == 16) {
+ 		key_shift = true;
+	}
+	if(event.which == 79) {
+		key_o = true;
+	}
+	if(event.which == 79) {
+		key_n = true;
+	}
+	if(key_shift && key_n && key_o) {
+		$("#menu-toggle").click();
+	}
+});

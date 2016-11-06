@@ -1,313 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Bootstrap Theme Simply Me</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
-  <link rel="stylesheet" type="text/css" href="stylesheets/scrollmagic.css">
-  <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="javascript/index.js"></script>
-  
-  <script type="text/javascript" src="scrollmagic/uncompressed/ScrollMagic.js"></script>
-  <script type="text/javascript" src="scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
-  
+	<title>Profile@github</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="stylesheets/index2.css">
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50" onload="animateFunc()">
-  <div id="loader"></div>
-  <div id="loader1"></div>
-  <div id="loader2"></div>
-  <div id="loader3"></div>
+<body>
 
-  <div style="display:none;" id="mainPage" class="animate-bottom">
+	<div id="bodyWrapper">
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
-          </button>
-          <a class="navbar-brand" href="#">Me</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
-    	  <li><a href="#container1simple">Who</a></li>
-    	  <li><a href="#container2simple">What</a></li>
-    	  <li><a href="#container3grid">Where</a></li>
-              <li><a href="#section1">Section 1</a></li>
-              <li><a href="#section2">Section 2</a></li>
-              <li><a href="#section3">Section 3</a></li>
-              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#section41">Section 4-1</a></li>
-                  <li><a href="#section42">Section 4-2</a></li>
-                </ul>
-              </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+		<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
 
-    <div id="trigger0" class="spacer s0"></div>
-    <div id="pin0" class="box2 red">
-            <h4>Who?</h4>
-    </div>
-    <!-- First Container -->
-    <div id="container1simple" class="container-fluid bg-5 text-center">
-      <h3 class="margin animated rollIn">Who Am I?</h3>
-      <img src="images/me2.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Me" width="350" height="350">
-      <h3>I am Nirabhra Tapaswi <br/>..from Kolkata, West Bengal</h3>
-    </div>
+		<div id="sideBar"></div>
 
-    <!--<h3 id="bounceTest" class="animated infinite bounce">Bounce Me</h3>-->
+		<div id="mainBody">
+			
+			<!--Who Am I-->
+			<div class="container-fluid bg-1 text-center border-class">
+				<h3>Who Am I?</h3>
+				<img src="images/me2.jpg" class="img-circle" alt="Nirabhra Tapaswi">
+	    		<h3>I'm Nirabhra Tapaswi</h3>
+			</div>
 
-    <div id="trigger1" class="spacer s0"></div>
-    <div id="pin1" class="box2 red">
-            <h4>What?</h4>
-    </div>
-    <!-- Second Container -->
-    <div id="container2simple" class="container-fluid bg-5 text-center">
-      <h3 id="whatAmI" class="margin">What Am I?</h3>
-      <p>I'm a programmer. <br/>Trust me, not my codes! <br/>Apart from this I am a good person...and a good friend!</p>
-      <a href="#" class="btn btn-default btn-lg">
-        <span class="glyphicon glyphicon-search"></span> Search
-      </a>
-    </div>
+			<!--What Am I-->
+			<div class="container-fluid bg-2 text-center border-class">
+				<h3>What Am I?</h3>
+	    		<h3>I'm an enthusiastic coder!</h3>
+			</div>
 
-    <div id="trigger2" class="spacer s0"></div>
-    <div id="pin2" class="box2 red">
-            <h4>Where?</h4>
-    </div>
-    <!-- Third Container (Grid) -->
-    <div id="container3grid" class="container-fluid bg-5 text-center">    
-      <h3 id="whereToFindMe" class="margin">Where To Find Me?</h3><br>
-      <div class="row">
-        <div class="col-sm-4">
-          <p>Always whenever I am there.</p>
-          <img src="images/room.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-        </div>
-        <div class="col-sm-4"> 
-          <p>After I die ofcourse!</p>
-          <img src="images/heaven.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-        </div>
-        <div class="col-sm-4"> 
-          <p>When I get bored...well for that you have to know when I am bored..</p>
-          <img src="images/court.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-        </div>
-      </div>
-    </div>
+		</div>
 
-    <div id="trigger3" class="spacer s0"></div>
-    <div id="pin3" class="box2 red">
-            <h4>Section 1</h4>
-    </div>
+	</div>
 
-    <!--Carousel-->
-
-    <div id="myCarousel" class="carousel slide" data-ride="carousel" height="200">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-      </ol>
-
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img src="images/img_chania.jpg" alt="Chania" width="460" height="345">
-        </div>
-
-        <div class="item">
-          <img src="images/img_chania2.jpg" alt="Chania" width="460" height="345">
-        </div>
-      
-        <div class="item">
-          <img src="images/img_flower.jpg" alt="Flower" width="460" height="345">
-        </div>
-
-        <div class="item">
-          <img src="images/img_flower2.jpg" alt="Flower" width="460" height="345">
-        </div>
-      </div>
-
-      <!-- Left and right controls -->
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-  </div>
-
-    <!-- Section 1 -->
-    <div id="section1" class="container-fluid bg-5 text-center">
-      <h1 id="section1Tada">Section 1</h1>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-    </div>
-
-    <div id="trigger4" class="spacer s0"></div>
-    <div id="pin4" class="box2 red">
-            <h4>Section 2</h4>
-    </div>
-
-    <!-- Section 2 -->
-    <div id="section2" class="container-fluid bg-5 text-center">
-      <h1 id="section2Tada">Section 2</h1>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-    </div>
-
-    <div id="trigger5" class="spacer s0"></div>
-    <div id="pin5" class="box2 red">
-            <h4>Section 3</h4>
-    </div>
-
-    <!-- Section 3 -->
-    <div id="section3" class="container-fluid bg-5 text-center">
-      <h1 id="section3Tada">Section 3</h1>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-    </div>
-
-    <div id="trigger6" class="spacer s0"></div>
-    <div id="pin6" class="box2 red">
-            <h4>Section 4</h4>
-    </div>
-
-    <!-- Section 4 -->
-    <div id="section41" class="container-fluid bg-5 text-center">
-      <h1 id="section41Tada">Section 4 Submenu 1</h1>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-    </div>
-    <div id="section42" class="container-fluid bg-5 text-center">
-      <h1 id="section42Tada">Section 4 Submenu 2</h1>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-    </div>
-
-    <!-- Footer -->
-    <footer class="container-fluid bg-4 text-center">
-      <p>Bootstrap Theme Made By <a href="http://www.w3schools.com">www.w3schools.com</a></p> 
-    </footer>
-    
-    <script type="text/javascript">    var controller = new ScrollMagic.Controller();
-      $(function () { // wait for document ready
-              // build scene
-              var scene = new ScrollMagic.Scene({triggerElement: "#trigger0"})
-                      .setPin("#pin0", {pushFollowers: false})
-                      //.addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
-                      .addTo(controller);
-
-              scene = new ScrollMagic.Scene({triggerElement: "#trigger1"})
-                      .setPin("#pin1", {pushFollowers: false})
-                      //.addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
-                      .addTo(controller)
-                      .on("enter leave", function (e) {
-                        //console.log(e.type);
-                        if(e.type == "enter") {
-                          $("#whatAmI").addClass('animated tada');
-                        }
-                        else {
-                          $("#whatAmI").removeClass('animated tada');
-                          //$("#whatAmI").addClass('animated rollIn');
-                          //$("#whatAmI").removeClass('animated infinite bounce');
-                        }
-                      });
-              scene = new ScrollMagic.Scene({triggerElement: "#trigger2"})
-                      .setPin("#pin2", {pushFollowers: false})
-                      //.addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
-                      .addTo(controller)
-                      .on("enter leave", function (e) {
-                        //console.log(e.type);
-                        if(e.type == "enter") {
-                          $("#whereToFindMe").addClass('animated tada');
-                        }
-                        else {
-                          $("#whereToFindMe").removeClass('animated tada');
-                          //$("#whatAmI").addClass('animated rollIn');
-                          //$("#whatAmI").removeClass('animated infinite bounce');
-                        }
-                      });
-              scene = new ScrollMagic.Scene({triggerElement: "#trigger3"})
-                      .setPin("#pin3", {pushFollowers: false})
-                      //.addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
-                      .addTo(controller)
-                      .on("enter leave", function (e) {
-                        //console.log(e.type);
-                        if(e.type == "enter") {
-                          $("#section1Tada").addClass('animated tada');
-                        }
-                        else {
-                          $("#section1Tada").removeClass('animated tada');
-                          //$("#whatAmI").addClass('animated rollIn');
-                          //$("#whatAmI").removeClass('animated infinite bounce');
-                        }
-                      });
-              scene = new ScrollMagic.Scene({triggerElement: "#trigger4"})
-                      .setPin("#pin4", {pushFollowers: false})
-                      //.addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
-                      .addTo(controller)
-                      .on("enter leave", function (e) {
-                        //console.log(e.type);
-                        if(e.type == "enter") {
-                          $("#section2Tada").addClass('animated tada');
-                        }
-                        else {
-                          $("#section2Tada").removeClass('animated tada');
-                          //$("#whatAmI").addClass('animated rollIn');
-                          //$("#whatAmI").removeClass('animated infinite bounce');
-                        }
-                      });
-              scene = new ScrollMagic.Scene({triggerElement: "#trigger5"})
-                      .setPin("#pin5", {pushFollowers: false})
-                      //.addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
-                      .addTo(controller)
-                      .on("enter leave", function (e) {
-                        //console.log(e.type);
-                        if(e.type == "enter") {
-                          $("#section3Tada").addClass('animated tada');
-                        }
-                        else {
-                          $("#section3Tada").removeClass('animated tada');
-                          //$("#whatAmI").addClass('animated rollIn');
-                          //$("#whatAmI").removeClass('animated infinite bounce');
-                        }
-                      });
-              scene = new ScrollMagic.Scene({triggerElement: "#trigger6"})
-                      .setPin("#pin6", {pushFollowers: false})
-                      //.addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
-                      .addTo(controller)
-                      .on("enter leave", function (e) {
-                        //console.log(e.type);
-                        if(e.type == "enter") {
-                          $("#section41Tada").addClass('animated tada');
-                          $("#section42Tada").addClass('animated tada');
-                        }
-                        else {
-                          $("#section41Tada").removeClass('animated tada');
-                          $("#section42Tada").removeClass('animated tada');
-                          //$("#whatAmI").addClass('animated rollIn');
-                          //$("#whatAmI").removeClass('animated infinite bounce');
-                        }
-                      });
-      });
-    </script>
-
-  </div>
+    <script type="text/javascript" src="javascript/index2.js"></script>
 </body>
 </html>
-
