@@ -36,7 +36,7 @@ document.addEventListener("keydown", function(event) {
 	if(event.which == 79) {
 		key_o = true;
 	}
-	if(event.which == 79) {
+	if(event.which == 78) {
 		key_n = true;
 	}
 	if(key_shift && key_n && key_o) {
