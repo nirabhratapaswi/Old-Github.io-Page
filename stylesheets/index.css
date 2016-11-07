@@ -102,7 +102,7 @@ body {
     background-image: url("../images/binary.jpg");
 
     /* Set a specific height */
-    min-height: 500px;
+    min-height: 680px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -116,7 +116,7 @@ body {
     background-image: url("../images/nature03.jpg");
 
     /* Set a specific height */
-    min-height: 500px;
+    min-height: 680px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -130,7 +130,7 @@ body {
     background-image: url("../images/hackers.jpg");
 
     /* Set a specific height */
-    min-height: 500px;
+    min-height: 680px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
