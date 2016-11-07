@@ -1,6 +1,7 @@
 body {
     overflow-x: hidden;
-    background-color: #000000;
+    /*background-color: #000000;
+    background-image: url("../images/nature02.png");*/
  }
 
 /* Toggle Styles */
@@ -81,4 +82,60 @@ body {
     border-bottom-width: 6px;
     border-style: solid;
     border-bottom-color: #A9A9A9;
+}
+
+.parallax01 {
+    /* The image used */
+    background-image: url("../images/nature02.png");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax02 {
+    /* The image used */
+    background-image: url("../images/binary.jpg");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax03 {
+    /* The image used */
+    background-image: url("../images/nature03.jpg");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax04 {
+    /* The image used */
+    background-image: url("../images/hackers.jpg");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
