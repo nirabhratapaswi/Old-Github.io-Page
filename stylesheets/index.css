@@ -70,7 +70,9 @@ body {
 .bg-1 {
 
     background-color: #222233;
+    background-color: #1C1F24;
     color: #AACCFF;
+    color: #A2482E;
 }
 
 .bg-2 {
@@ -85,7 +87,7 @@ body {
 
 .parallax01 {
     /* The image used */
-    background-image: url("../images/nature02.png");
+    background-image: url("../images/dark01.jpg");
 
     /* Set a specific height */
     min-height: 680px;
@@ -99,10 +101,10 @@ body {
 
 .parallax02 {
     /* The image used */
-    background-image: url("../images/binary.jpg");
+    background-image: url("../images/dark02.jpg");
 
     /* Set a specific height */
-    min-height: 680px;
+    min-height: 400px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -113,10 +115,10 @@ body {
 
 .parallax03 {
     /* The image used */
-    background-image: url("../images/nature03.jpg");
+    background-image: url("../images/dark03.jpg");
 
     /* Set a specific height */
-    min-height: 680px;
+    min-height: 400px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -187,3 +189,6 @@ body {
     background: none;
 }
 
+.active {
+    color: red;
+}

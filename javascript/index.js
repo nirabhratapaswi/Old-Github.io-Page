@@ -59,7 +59,7 @@ document.addEventListener("keydown", function(event) {
 		$("#menu-toggle").click();
 	}
 	if(key_shift && key_n && key_up) {
-		if(ref>=3) {
+		if(ref>=4) {
 			ref=0;
 		}
 		else {
@@ -77,10 +77,13 @@ document.addEventListener("keydown", function(event) {
 		else if(ref==3) {
 			$( "#nav-ul li:nth-child(4) a" ).click();
 		}
+		else if(ref==4) {
+			$( "#nav-ul li:nth-child(5) a" ).click();
+		}
 	}
 	if(key_shift && key_n && key_down) {
 		if(ref<=0) {
-			ref=3;
+			ref=4;
 		}
 		else {
 			ref--;
@@ -97,6 +100,9 @@ document.addEventListener("keydown", function(event) {
 		else if(ref==3) {
 			$( "#nav-ul li:nth-child(4) a" ).click();
 		}
+		else if(ref==4) {
+			$( "#nav-ul li:nth-child(5) a" ).click();
+		}
 	}
 });
 
@@ -111,4 +117,38 @@ $(function() {
     });
 });
 
-
+var div1 = document.getElementById('id01');
+var div2 = document.getElementById('id02');
+var div3 = document.getElementById('id03');
+var div4 = document.getElementById('id04');
+setInterval(function() {
+	var top  = window.pageYOffset || document.documentElement.scrollTop;
+	var top1 = div1.offsetTop;
+	var top2 = div2.offsetTop;
+	var top3 = div3.offsetTop;
+	var top4 = div4.offsetTop;
+	if( (top4-200) < top) {
+		$( "#nav-ul li:nth-child(2) a span" ).removeClass("active");
+		$( "#nav-ul li:nth-child(3) a span" ).removeClass("active");
+		$( "#nav-ul li:nth-child(4) a span" ).removeClass("active");
+		$( "#nav-ul li:nth-child(5) a span" ).addClass("active");
+	}
+	else if( (top3-50) < top) {
+		$( "#nav-ul li:nth-child(2) a span" ).removeClass("active");
+		$( "#nav-ul li:nth-child(3) a span" ).removeClass("active");
+		$( "#nav-ul li:nth-child(4) a span" ).addClass("active");
+		$( "#nav-ul li:nth-child(5) a span" ).removeClass("active");
+	}
+	else if( (top2-50) < top) {
+		$( "#nav-ul li:nth-child(2) a span" ).removeClass("active");
+		$( "#nav-ul li:nth-child(3) a span" ).addClass("active");
+		$( "#nav-ul li:nth-child(4) a span" ).removeClass("active");
+		$( "#nav-ul li:nth-child(5) a span" ).removeClass("active");
+	}
+	else if( (top1-50) < top) {
+		$( "#nav-ul li:nth-child(2) a span" ).addClass("active");
+		$( "#nav-ul li:nth-child(3) a span" ).removeClass("active");
+		$( "#nav-ul li:nth-child(4) a span" ).removeClass("active");
+		$( "#nav-ul li:nth-child(5) a span" ).removeClass("active");
+	}
+}, 500);

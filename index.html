@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
   	<link rel="stylesheet" type="text/css" href="stylesheets/index.css">
 </head>
-<body>
+<body data-spy="scroll" data-target="#sideBar" data-offset="50">
 
 	<div id="bodyWrapper">
 
@@ -19,16 +19,19 @@
 		<div id="sideBar">
         <ul id="nav-ul" class="sidebar-nav">
           <li class="sidebar-brand">
-            <a class="page-scroll" href="#startPic">Nirabhra Tapaswi</a>
+            <a class="page-scroll" href="#startPic"><span>Nirabhra Tapaswi</span></a>
           </li>
           <li>
-            <a class="page-scroll" href="#id01">Who Am I</a>
+            <a class="page-scroll" href="#id01"><span>Who Am I</span></a>
           </li>
           <li>
-            <a class="page-scroll" href="#id02">Something about me</a>
+            <a class="page-scroll" href="#id02"><span>Something about me</span></a>
           </li>
           <li>
-            <a class="page-scroll" href="#id03">What do I do</a>
+            <a class="page-scroll" href="#id03"><span>What do I do</span></a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#id04"><span>Contact Me</span></a>
           </li>
         </ul>
     </div>
@@ -47,7 +50,7 @@
       <div class="parallax02"></div>
 
 			<!--What Am I-->
-			<div id="id02" class="container-fluid bg-2 text-center border-class">
+			<div id="id02" class="container-fluid bg-1 text-center border-class">
 				<h2>Something about me..</h2>
 	    		<h3>I am from Kolkata originally, and have spent my childhood in Mumbai, the greatest city in the country. I am a student of Delhi Public School, Navi Mumbai. I love playing badminton and football, and hate not having to play them! Proudly mentioning, I am a Bengali and I eat liquids!! Currently I am studying Chemical Engineering in National Institute of Technology, Tiruchirappalli (NIT Trichy) and I am lucky to be a part of Spider(R&D club of my college).</h3>
 			</div>
@@ -61,6 +64,9 @@
       </div>
 
       <div class="parallax04"></div>
+
+      <div id="id04" class="container-fluid bg-1 text-center border-class" style="height: 400px">
+      </div>
 
 		</div>
 
