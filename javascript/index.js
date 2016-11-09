@@ -1,3 +1,29 @@
+$(document).ready(function() {
+  // Animate loader off screen
+  setTimeout(function() {
+  	$(".pagePreloader").fadeOut("slow");
+  }, 1500);
+});
+
+var arrow = 2;
+
+function scrollArrow() {
+	if(arrow>8) {
+		arrow = 2;
+	}
+	var show = "#scrollTell i:nth-child(" + arrow + ")";
+	$(show).removeClass("hideArrow");
+	for(var i=2; i<9; i+=2) {
+		var select = "#scrollTell i:nth-child(" + i + ")";
+		if(i!=arrow) {
+			$(select).addClass("hideArrow");
+		}
+	}
+	arrow+=2;
+}
+
+setInterval(scrollArrow, 400);
+
 var toggle_menu = true;
 var toggle_info = true;
 $("#menu-toggle").click(function(e) {
