@@ -280,3 +280,16 @@ code {
 .slider-size {
     height: 300px;      /* This is your slider height */
 }
+
+#scrollTell {
+    position: fixed;
+    top: 80%;
+    left: 40%;
+    z-index: 1;
+    color: #00d905;
+}
+
+#scrollDiv {
+    position: relative;
+    z-index: 100;
+}
