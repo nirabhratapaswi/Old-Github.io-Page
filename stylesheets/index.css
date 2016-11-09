@@ -53,6 +53,7 @@ body {
     position: fixed;
     left: 4px;
     top: 4px;
+    width: 50px;
     z-index: 10000;
     background-color: #222233;
     color: #AACCFF;;
@@ -68,10 +69,7 @@ body {
 }
 
 .bg-1 {
-
-    background-color: #222233;
     background-color: #1C1F24;
-    color: #AACCFF;
     color: #A2482E;
 }
 
@@ -90,7 +88,7 @@ body {
     background-image: url("../images/dark01.jpg");
 
     /* Set a specific height */
-    min-height: 680px;
+    min-height: 620px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -104,7 +102,7 @@ body {
     background-image: url("../images/dark02.jpg");
 
     /* Set a specific height */
-    min-height: 400px;
+    min-height: 370px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -118,7 +116,7 @@ body {
     background-image: url("../images/dark03.jpg");
 
     /* Set a specific height */
-    min-height: 400px;
+    min-height: 370px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -132,7 +130,7 @@ body {
     background-image: url("../images/hackers.jpg");
 
     /* Set a specific height */
-    min-height: 680px;
+    min-height: 400px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -191,4 +189,83 @@ body {
 
 .active {
     color: red;
+}
+
+.headerQues {
+    padding: 20px;
+    color: #A62139;
+}
+
+.hover-active-red:hover {
+    color: red;
+}
+
+.hover-active-green:hover {
+    color: green;
+}
+
+#info-div {
+    position: fixed;
+    color: #0bff00;
+    border-width: 0px;
+    border-left-width: 3px;
+    border-bottom-width: 4px;
+    border-bottom-left-radius: 10px;
+    border-style: solid;
+    border-color: #0bff00;
+    background-color: transparent;
+    right: 42px;
+    top: 2px;
+    height: 100px;
+    overflow-y: auto;
+    display: none;
+}
+
+#info-div.toggled {
+    display: block;
+}
+
+#info-toggle {
+    position: fixed;
+    top: 2px;
+    right: 10px;
+    z-index: 10000;
+}
+
+code {
+    background-color: #cfffcc;
+}
+
+.images {
+    margin-top: 30px;
+    margin-right: 40px;
+    width: 40px;
+    height: 40px;
+}
+
+#twitter {
+    width: 50px;
+    height: 50px;
+}
+
+#myContacts {
+    padding: 45px;
+    text-align: center;
+    color: #1C1F24;
+}
+
+#contactInfo {
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    color: #A2482E;
+}
+
+.innerQues {
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    color: #A2482E;
 }

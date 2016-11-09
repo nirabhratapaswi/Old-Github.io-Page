@@ -1,23 +1,45 @@
-var toggle = true;
-	    $("#menu-toggle").click(function(e) {
-	        e.preventDefault();
-	        $("#bodyWrapper").toggleClass("toggled");
-	        if(toggle) {
-		        $("#menu-toggle>span").removeClass("glyphicon glyphicon-menu-hamburger");
-		        $("#menu-toggle>span").addClass("glyphicon glyphicon-remove");
-		        toggle = !toggle;
-		    }
-		    else {
-		    	$("#menu-toggle>span").removeClass("glyphicon glyphicon-remove");
-		        $("#menu-toggle>span").addClass("glyphicon glyphicon-menu-hamburger");
-		        toggle = !toggle;
-		    }
-	    });
+var toggle_menu = true;
+var toggle_info = true;
+$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#bodyWrapper").toggleClass("toggled");
+	if(toggle_menu) {
+		$("#menu-toggle>span").removeClass("glyphicon glyphicon-menu-hamburger");
+		$("#menu-toggle>span").removeClass("hover-active-green");
+		$("#menu-toggle>span").addClass("glyphicon glyphicon-remove");
+		$("#menu-toggle>span").addClass("hover-active-red");
+		toggle_menu = !toggle_menu;
+	}
+	else {
+		$("#menu-toggle>span").removeClass("glyphicon glyphicon-remove");
+		$("#menu-toggle>span").removeClass("hover-active-red");
+		$("#menu-toggle>span").addClass("glyphicon glyphicon-menu-hamburger");
+		$("#menu-toggle>span").addClass("hover-active-green");
+		toggle_menu = !toggle_menu;
+	}
+});
+
+$("#info-toggle").click(function(e) {
+	e.preventDefault();
+	$("#info-div").toggleClass("toggled");
+	if(toggle_info) {
+		$("#info-toggle>span").removeClass("hover-active-green");
+		$("#info-toggle>span").addClass("hover-active-red");
+		toggle_info = !toggle_info;
+	}
+	else {
+		$("#info-toggle>span").removeClass("hover-active-red");
+		$("#info-toggle>span").addClass("hover-active-green");
+		toggle_info = !toggle_info;
+	}
+});
+
 var key_shift = false,
 	key_o = false,
 	key_n = false,
 	key_up = false,
-	key_down = false;
+	key_down = false,
+	key_h = false;
 
 var ref = 0;
 
@@ -37,6 +59,9 @@ document.addEventListener("keyup", function(event) {
 	if(event.which == 40) {
 		key_down = false;
 	}
+	if(event.which == 72) {
+		key_h = false;
+	}
 });
 
 document.addEventListener("keydown", function(event) {
@@ -55,8 +80,14 @@ document.addEventListener("keydown", function(event) {
 	if(event.which == 40) {
 		key_down = true;
 	}
+	if(event.which == 72) {
+		key_h = true;
+	}
 	if(key_shift && key_n && key_o) {
 		$("#menu-toggle").click();
+	}
+	if(key_shift && key_n && key_h) {
+		$("#info-toggle").click();
 	}
 	if(key_shift && key_n && key_up) {
 		if(ref>=4) {
@@ -127,28 +158,58 @@ setInterval(function() {
 	var top2 = div2.offsetTop;
 	var top3 = div3.offsetTop;
 	var top4 = div4.offsetTop;
-	if( (top4-200) < top) {
+	if( (top4) < (top + (2 * screen.height/3)) ) {
 		$( "#nav-ul li:nth-child(2) a span" ).removeClass("active");
 		$( "#nav-ul li:nth-child(3) a span" ).removeClass("active");
 		$( "#nav-ul li:nth-child(4) a span" ).removeClass("active");
 		$( "#nav-ul li:nth-child(5) a span" ).addClass("active");
 	}
-	else if( (top3-50) < top) {
+	else if( (top3) < (top + (screen.height/2)) ) {
 		$( "#nav-ul li:nth-child(2) a span" ).removeClass("active");
 		$( "#nav-ul li:nth-child(3) a span" ).removeClass("active");
 		$( "#nav-ul li:nth-child(4) a span" ).addClass("active");
 		$( "#nav-ul li:nth-child(5) a span" ).removeClass("active");
 	}
-	else if( (top2-50) < top) {
+	else if( (top2) < (top + (screen.height/2)) ) {
 		$( "#nav-ul li:nth-child(2) a span" ).removeClass("active");
 		$( "#nav-ul li:nth-child(3) a span" ).addClass("active");
 		$( "#nav-ul li:nth-child(4) a span" ).removeClass("active");
 		$( "#nav-ul li:nth-child(5) a span" ).removeClass("active");
 	}
-	else if( (top1-50) < top) {
+	else if( (top1) < (top + (screen.height/2)) ) {
 		$( "#nav-ul li:nth-child(2) a span" ).addClass("active");
 		$( "#nav-ul li:nth-child(3) a span" ).removeClass("active");
 		$( "#nav-ul li:nth-child(4) a span" ).removeClass("active");
 		$( "#nav-ul li:nth-child(5) a span" ).removeClass("active");
 	}
+	else {
+		$( "#nav-ul li:nth-child(2) a span" ).removeClass("active");
+		$( "#nav-ul li:nth-child(3) a span" ).removeClass("active");
+		$( "#nav-ul li:nth-child(4) a span" ).removeClass("active");
+		$( "#nav-ul li:nth-child(5) a span" ).removeClass("active");
+	}
 }, 500);
+
+var image1 = document.getElementById("googleP");
+image1.onclick = function() {
+	window.location.href = 'https://plus.google.com/u/0/112662500406439860442';
+}
+
+var image2 = document.getElementById("facebook");
+image2.onclick = function() {
+	window.location.href = 'https://www.facebook.com/nirabhratapaswi97';
+}
+
+var image3 = document.getElementById("twitter");
+image3.onclick = function() {
+	window.location.href = 'https://twitter.com/nirabhratapaswi';
+}
+
+var image4 = document.getElementById("github");
+image4.onclick = function() {
+	window.location.href = 'https://github.com/nirabhratapaswi';
+}
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
