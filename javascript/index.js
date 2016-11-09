@@ -39,6 +39,8 @@ var key_shift = false,
 	key_n = false,
 	key_up = false,
 	key_down = false,
+	key_left = false,
+	key_right = false,
 	key_h = false;
 
 var ref = 0;
@@ -62,6 +64,12 @@ document.addEventListener("keyup", function(event) {
 	if(event.which == 72) {
 		key_h = false;
 	}
+	if(event.which == 39) {
+		key_right = false;
+	}
+	if(event.which == 37) {
+		key_left = false;
+	}
 });
 
 document.addEventListener("keydown", function(event) {
@@ -83,11 +91,23 @@ document.addEventListener("keydown", function(event) {
 	if(event.which == 72) {
 		key_h = true;
 	}
+	if(event.which == 39) {
+		key_right = true;
+	}
+	if(event.which == 37) {
+		key_left = true;
+	}
 	if(key_shift && key_n && key_o) {
 		$("#menu-toggle").click();
 	}
 	if(key_shift && key_n && key_h) {
 		$("#info-toggle").click();
+	}
+	if(key_shift && key_n && key_left) {
+		$("#carouselPrev").click();
+	}
+	if(key_shift && key_n && key_right) {
+		$("#carouselNext").click();
 	}
 	if(key_shift && key_n && key_up) {
 		if(ref>=4) {
@@ -192,22 +212,22 @@ setInterval(function() {
 
 var image1 = document.getElementById("googleP");
 image1.onclick = function() {
-	window.location.href = 'https://plus.google.com/u/0/112662500406439860442';
+	window.open('https://plus.google.com/u/0/112662500406439860442','_blank');
 }
 
 var image2 = document.getElementById("facebook");
 image2.onclick = function() {
-	window.location.href = 'https://www.facebook.com/nirabhratapaswi97';
+	window.open('https://www.facebook.com/nirabhratapaswi97','_blank');
 }
 
 var image3 = document.getElementById("twitter");
 image3.onclick = function() {
-	window.location.href = 'https://twitter.com/nirabhratapaswi';
+	window.open('https://twitter.com/nirabhratapaswi','_blank');
 }
 
 var image4 = document.getElementById("github");
 image4.onclick = function() {
-	window.location.href = 'https://github.com/nirabhratapaswi';
+	window.open('https://github.com/nirabhratapaswi','_blank');
 }
 
 $(document).ready(function(){

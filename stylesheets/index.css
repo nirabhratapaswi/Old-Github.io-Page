@@ -269,3 +269,14 @@ code {
     font-size: 30px;
     color: #A2482E;
 }
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+      width: 70%;
+      height: 60%;
+      margin: auto;
+}
+
+.slider-size {
+    height: 300px;      /* This is your slider height */
+}

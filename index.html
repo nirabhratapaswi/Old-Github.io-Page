@@ -22,6 +22,8 @@
       <p><b>Open sidebar: <code>shift</code> + <code>n</code> + <code>o</code></b></p>
       <p><b>Scroll to next section: <code>shift</code> + <code>n</code> + <code>(up arrow)</code></b></p>
       <p><b>Scroll to previous section: <code>shift</code> + <code>n</code> + <code>(down arrow)</code></b></p>
+      <p><b>Slideshow slide left: <code>shift</code> + <code>n</code> + <code>(left arrow)</code></b></p>
+      <p><b>Slideshow slide right: <code>shift</code> + <code>n</code> + <code>(right arrow)</code></b></p>
     </div>
 
     <!--Sidebar-->
@@ -52,7 +54,93 @@
 			<!--Who Am I-->
 			<div id="id01" class="container-fluid bg-1 text-center border-class">
 				<h1 class="headerQues">WHO AM I?</h1>
-				<img src="images/me2.jpg" height="10%" width="15%" class="img-circle" alt="Nirabhra Tapaswi">
+				<!--<img src="images/me2.jpg" height="10%" width="15%" class="img-circle" alt="Nirabhra Tapaswi">-->
+
+        <!--carousel start-->
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="hover">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+
+            <div class="item active">
+              <div class="slider-size">
+                  <img src="images/carousel01.jpg" style="height: 100%;" />
+              </div>
+              <!--<img src="images/carousel01.jpg" alt="Chania" width="460" height="345">-->
+              <div class="carousel-caption">
+                <h3>Kodaikanal</h3>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="slider-size">
+                  <img src="images/carousel02.jpg" style="height: 100%;" />
+              </div>
+              <div class="carousel-caption">
+                <h3>At NIT Trichy</h3>
+              </div>
+            </div>
+          
+
+            <div class="item">
+              <div class="slider-size">
+                  <img src="images/carousel03.jpg" style="height: 100%;" />
+              </div>
+              <div class="carousel-caption">
+                <h3>Cloud Pass-Kodaikanal</h3>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="slider-size">
+                  <img src="images/carousel04.jpg" style="height: 100%;" />
+              </div>
+              <div class="carousel-caption">
+                <h3>Chemical Engineering Department, batch of 2019</h3>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="slider-size">
+                  <img src="images/carousel05.jpg" style="height: 100%;" />
+              </div>
+              <div class="carousel-caption">
+                <h3>At Guest House, HPCL colony</h3>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="slider-size">
+                  <img src="images/carousel06.jpg" style="height: 100%;" />
+              </div>
+              <div class="carousel-caption">
+                <h3>Birla Bharati, batch of 2015</h3>
+              </div>
+            </div>
+        
+          </div>
+
+          <!-- Left and right controls -->
+          <a id="carouselPrev" class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a id="carouselNext" class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+        <!--carousel end-->
+
           <div class="innerQues">
             <p>I'm Nirabhra Tapaswi</p>
           </div>
