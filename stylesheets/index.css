@@ -295,9 +295,14 @@ code {
     visibility: hidden;
 }
 
-#scrollDiv {
+/*#scrollDiv {
     position: relative;
     z-index: 100;
+}*/
+
+.restBody {
+    position: relative;
+    z-index: 2;
 }
 
 .pagePreloader {
