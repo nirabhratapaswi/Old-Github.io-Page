@@ -1,7 +1,9 @@
+var loaded = false;
 $(document).ready(function() {
   // Animate loader off screen
   setTimeout(function() {
   	$(".pagePreloader").fadeOut("slow");
+  	console.log("haha");
   }, 1500);
 });
 
@@ -199,11 +201,36 @@ var div2 = document.getElementById('id02');
 var div3 = document.getElementById('id03');
 var div4 = document.getElementById('id04');
 setInterval(function() {
-	var top  = window.pageYOffset || document.documentElement.scrollTop;
-	var top1 = div1.offsetTop;
-	var top2 = div2.offsetTop;
-	var top3 = div3.offsetTop;
-	var top4 = div4.offsetTop;
+	var top  = window.pageYOffset || document.documentElement.scrollTop || 0;
+	var top1 = div1.offsetTop || screen.height;
+	var top2 = div2.offsetTop || screen.height * 2;
+	var top3 = div3.offsetTop || screen.height * 3;
+	var top4 = div4.offsetTop || screen.height * 4;
+	if( (top4) < (top + (screen.height)) ) {
+		$( "#id04" ).slideDown(1000);
+	}
+	else {
+		$( "#id04" ).slideUp(1000);
+	}
+	if( (top3) < (top + (3 * screen.height/4)) ) {
+		$( "#id03" ).slideDown(1000);
+	}
+	else {
+		$( "#id03" ).slideUp(1000);
+	}
+	if( (top2) < (top + (3 * screen.height/4)) ) {
+		$( "#id02" ).slideDown(1000);
+	}
+	else {
+		$( "#id02" ).slideUp(1000);
+	}
+	if( (top1) < (top + (3 * screen.height/4)) ) {
+		$( "#id01" ).slideDown(1000);
+	}
+	else {
+		$( "#id01" ).slideUp(1000);
+	}
+
 	if( (top4) < (top + (2 * screen.height/3)) ) {
 		$( "#nav-ul li:nth-child(2) a span" ).removeClass("active");
 		$( "#nav-ul li:nth-child(3) a span" ).removeClass("active");
@@ -234,7 +261,7 @@ setInterval(function() {
 		$( "#nav-ul li:nth-child(4) a span" ).removeClass("active");
 		$( "#nav-ul li:nth-child(5) a span" ).removeClass("active");
 	}
-}, 500);
+}, 100);
 
 var image1 = document.getElementById("googleP");
 image1.onclick = function() {
