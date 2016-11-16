@@ -191,6 +191,12 @@ body {
     color: red;
 }
 
+.active-border {
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: red;
+}
+
 .headerQues {
     padding: 20px;
     color: #A62139;
@@ -314,10 +320,6 @@ code {
 }
 
 #id03 {
-    display: none;
-}
-
-#id04 {
     display: none;
 }
 
