@@ -1,5 +1,6 @@
 body {
     overflow-x: hidden;
+    cursor: default;
     /*background-color: #000000;
     background-image: url("../images/nature02.png");*/
  }
@@ -236,6 +237,7 @@ body {
     top: 2px;
     right: 10px;
     z-index: 10000;
+    cursor: help;
 }
 
 code {
@@ -247,6 +249,7 @@ code {
     margin-right: 40px;
     width: 40px;
     height: 40px;
+    cursor: pointer;
 }
 
 #twitter {
@@ -331,4 +334,5 @@ code {
     height: 100%;
     z-index: 11000;
     background: url(../images/Preloader_3.gif) center no-repeat #fff;
+    cursor: wait;
 }
