@@ -213,6 +213,7 @@ body {
 
 #info-div {
     position: fixed;
+    z-index: 10000;
     color: #0bff00;
     border-width: 0px;
     border-left-width: 3px;
@@ -344,9 +345,13 @@ code {
     margin-top: 2px;
     width: 20%;
     height: 8%;
-    background-color: white;
+    background-color: #373737;
     text-align: center;
     font-size: 20px;
+    border-style: solid;
+    border-color: #373737;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
     overflow-y: hidden;
     overflow-x: hidden;
 }
@@ -354,5 +359,17 @@ code {
 #tips {
     position: relative;
     padding-top: 5%;
-    padding-left: 29%;
+    color: #F4F4F4;
+}
+
+.removeBtn {
+    color: red;
+    font-size: 17px;
+}
+
+#iconClose {
+    position: fixed;
+    z-index: 1000;
+    left: 60%;
+    top: 1%;
 }

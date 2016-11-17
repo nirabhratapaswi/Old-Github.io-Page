@@ -1,6 +1,12 @@
 var loaded = false;
 var loadTime, checkLoad;
 
+var closeTip = document.getElementById("iconClose");
+closeTip.onclick = function() {
+	$("#iconClose").fadeOut("slow");
+	$("#tipParent").fadeOut("slow");
+}
+
 window.onload = function() {
 	console.log("loaded");
 	setTimeout(function() {
@@ -22,10 +28,9 @@ $(document).ready(function() {
 
 function checkTime() {
 	var delayedTime = (Date.now() - loadTime) / 1000;
-	if(delayedTime > 2) {
+	if(delayedTime > 10) {
 		console.log("Try reloading the page!!");
 	}
-	console.log(delayedTime);
 }
 
 function tipsDiv() {
@@ -109,7 +114,8 @@ var key_shift = false,
 	key_down = false,
 	key_left = false,
 	key_right = false,
-	key_h = false;
+	key_h = false,
+	key_l = false;
 
 var ref = 0;
 
@@ -138,6 +144,9 @@ document.addEventListener("keyup", function(event) {
 	if(event.which == 37) {
 		key_left = false;
 	}
+	if(event.which == 76) {
+		key_l = false;
+	}
 });
 
 document.addEventListener("keydown", function(event) {
@@ -165,6 +174,9 @@ document.addEventListener("keydown", function(event) {
 	if(event.which == 37) {
 		key_left = true;
 	}
+	if(event.which == 76) {
+		key_l = true;
+	}
 	if(key_shift && key_n && key_o) {
 		$("#menu-toggle").click();
 	}
@@ -176,6 +188,10 @@ document.addEventListener("keydown", function(event) {
 	}
 	if(key_shift && key_n && key_right) {
 		$("#carouselNext").click();
+	}
+	if(key_shift && key_n && key_l) {
+		$("#tipParent").fadeToggle("slow");
+		$("#iconClose").fadeToggle("slow");
 	}
 	if(key_shift && key_n && key_up) {
 		if(ref>=4) {
@@ -331,3 +347,5 @@ image4.onclick = function() {
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
 });
+
+
