@@ -21,8 +21,8 @@ $(document).ready(function() {
 });
 
 function checkTime() {
-	var delayedTime = (loadTime - Date.now()) / 1000;
-	if(delayedTime > 7) {
+	var delayedTime = (Date.now() - loadTime) / 1000;
+	if(delayedTime > 2) {
 		console.log("Try reloading the page!!");
 	}
 	console.log(delayedTime);
