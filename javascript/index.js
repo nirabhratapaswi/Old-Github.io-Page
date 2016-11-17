@@ -16,7 +16,7 @@ $(document).ready(function() {
   }, 1500);*/
   console.log("Loading...");
   loadTime = Date.now();
-  checkLoad = setInterval(checkTime, 1);
+  checkLoad = setInterval(checkTime, 100);
   setInterval(tipsDiv, 2000);
 });
 
@@ -25,7 +25,7 @@ function checkTime() {
 	if(delayedTime > 7) {
 		console.log("Try reloading the page!!");
 	}
-	//console.log(delayedTime);
+	console.log(delayedTime);
 }
 
 function tipsDiv() {
