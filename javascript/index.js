@@ -1,11 +1,35 @@
 var loaded = false;
+
+window.onload = function() {
+	console.log("loaded");
+}
+
 $(document).ready(function() {
   // Animate loader off screen
   setTimeout(function() {
   	$(".pagePreloader").fadeOut("slow");
-  	console.log("haha");
   }, 1500);
+  setInterval(tipsDiv, 2000);
 });
+
+function tipsDiv() {
+	var tips = ["shift + n + h","shift + n + o","shift + n + up","shift + n + down","shift + n + left","shift + n + right"];
+	var tip = document.getElementById("tips").innerText;
+	for(var x=0; x<tips.length; x++) {
+		if(tips[x]==tip) {
+			if(x<tips.length-1) {
+				tip=tips[x+1];
+				break;
+			}
+			else if(x==tips.length-1) {
+				tip=tips[0];
+				break;
+			}
+		}
+	}
+	document.getElementById("tips").innerText = tip;
+	//console.log(tip);
+}
 
 var arrow = 2;
 
