@@ -2,13 +2,16 @@ var loaded = false;
 
 window.onload = function() {
 	console.log("loaded");
+	setTimeout(function() {
+  		$(".pagePreloader").fadeOut("slow");
+  	}, 500);
 }
 
 $(document).ready(function() {
   // Animate loader off screen
-  setTimeout(function() {
+  /*setTimeout(function() {
   	$(".pagePreloader").fadeOut("slow");
-  }, 1500);
+  }, 1500);*/
   setInterval(tipsDiv, 2000);
 });
 
