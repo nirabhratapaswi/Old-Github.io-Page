@@ -1,10 +1,12 @@
 var loaded = false;
+var loadTime, checkLoad;
 
 window.onload = function() {
 	console.log("loaded");
 	setTimeout(function() {
   		$(".pagePreloader").fadeOut("slow");
   	}, 500);
+  	clearInterval(checkLoad);
 }
 
 $(document).ready(function() {
@@ -12,8 +14,19 @@ $(document).ready(function() {
   /*setTimeout(function() {
   	$(".pagePreloader").fadeOut("slow");
   }, 1500);*/
+  console.log("Loading...");
+  loadTime = Date.now();
+  checkLoad = setInterval(checkTime, 1);
   setInterval(tipsDiv, 2000);
 });
+
+function checkTime() {
+	var delayedTime = (loadTime - Date.now()) / 1000;
+	if(delayedTime > 7) {
+		console.log("Try reloading the page!!");
+	}
+	//console.log(delayedTime);
+}
 
 function tipsDiv() {
 	var tips = ["shift + n + h","shift + n + o","shift + n + up","shift + n + down","shift + n + left","shift + n + right"];
